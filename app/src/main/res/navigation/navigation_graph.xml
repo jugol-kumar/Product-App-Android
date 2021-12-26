@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.seip.android.lt2b1product.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/to_all_product_action"
+            app:destination="@id/allProduct" />
+        <action
+            android:id="@+id/to_my_product_action"
+            app:destination="@id/myProduct" />
+    </fragment>
+    <fragment
+        android:id="@+id/allProduct"
+        android:name="com.seip.android.lt2b1product.AllProduct"
+        android:label="fragment_all_product"
+        tools:layout="@layout/fragment_all_product" />
+    <fragment
+        android:id="@+id/myProduct"
+        android:name="com.seip.android.lt2b1product.MyProduct"
+        android:label="fragment_my_product"
+        tools:layout="@layout/fragment_my_product" />
+</navigation>
